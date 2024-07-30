@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="music.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="player">
+            <nav>
+                <div class="circle" onclick="prevSong()">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="circle" id="volume">
+                    <i class="fa-solid fa-volume-high" id="volume-icon"></i>
+                </div>
+            </nav>
+            <img src="images/4 am.jpg" class="song-img" id="song-img">
+            <h1 id="song-title">Song Title</h1>
+            <p id="song-artist">Artist Name</p>
+            <audio id="song">
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            </audio>
+            <div id="progress-container">
+                <input type="range" value="0" id="progress">
+                <div class="timeline">
+                    <span id="current-time">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+            <div class="control">
+                <div onclick="prevSong()"><i class="fa-solid fa-backward"></i></div>
+                <div onclick="playpause()"><i class="fa-solid fa-play" id="ctrlicon"></i></div>
+                <div onclick="nextSong()"><i class="fa-solid fa-forward"></i></div>
+            </div>
+            <source src="">
+        </div>
+    </div>
+    <script src="music.js">
+       
+    </script>
+</body>
+</html>
